@@ -1,0 +1,89 @@
+.auth-container {
+    background-image: url(../images/auth-images/background.svg);
+    background-color: #F6F8F9;
+    background-blend-mode: overlay;
+    max-width: 1351px;
+    padding: 1rem 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.auth {
+    max-width: 28rem;
+    margin: 0 auto;
+    min-height: 38.625rem;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 6px 7px 14px #c8cacc, -6px 7px 14px #c8cacc;
+}
+
+.logo-icon {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    margin-bottom: .875rem;
+}
+
+.log-in, .sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.policy,
+.copyright {
+    font-weight: 400;
+    text-align: center;
+    color: #6a7282;
+}
+
+.policy a{
+    text-decoration: none;
+    color: #155DFC;
+}
+
+.policy {
+    font-size: .75rem;
+}
+
+.copyright {
+    font-size: .875rem;
+    padding-bottom: .5rem;
+}
+
+.sign-up {
+    display: none;
+}
+
+/* Animation */
+.circle-shape, .arrow-shape, .triangle-shape {
+    position: absolute;
+}
+
+.circle-shape {
+    top: 8rem;
+    left: 4rem;
+}
+
+.arrow-shape {
+    right: 21.25rem;
+    top: 6.25rem;
+    animation: move 1s infinite ease-in-out;
+}
+
+@keyframes move {
+    0% {
+        top:100px;
+    }
+
+    50% {
+        top:115px;
+    }
+}
+
+.triangle-shape {
+
+    right: 21.25rem;
+    top: 20rem;
+}

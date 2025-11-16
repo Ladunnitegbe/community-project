@@ -1,0 +1,154 @@
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.log-div{
+    max-width: 25rem;
+    box-sizing: border-box;
+   
+}
+
+.login-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.login-instruction {
+    font-size: 1rem;
+    color: #576378;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.login-title,
+.login-instruction {
+    text-align: center;
+}
+
+.tabs-btn {
+    background-color: #F3F4F6;
+    max-width: 25rem;
+    height: 2.25rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.25rem;
+}
+
+.login-tab,
+.signup-tab {
+    width: 12.25rem;
+    height: 1.8125rem;
+    font-weight: 500;
+    font-size: .875rem;
+    border-radius: 8px;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs-btn .login-tab {
+    background-color: white;
+}
+
+.tabs-btn .signup-tab {
+    background-color: transparent;
+}
+
+.login-input label {
+    font-size: .875rem;
+    font-weight: 500;
+    color: #364153;
+}
+
+.login-input input {
+    width: 25rem;
+    height: 3rem;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    margin-top: .5rem;
+}
+
+input {
+    padding-left: 39px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 4px solid #9DC0FA;
+    outline: none;
+}
+
+.login-input {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.password::placeholder {
+    font-size: 1.5rem;
+    font-family: 500;
+}
+
+.login-email-icon,
+.login-lock-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+    left: 12px;
+}
+
+.login-email-icon {
+    top: 2.5625rem;
+}
+
+.login-lock-icon {
+    top: 8.2rem;
+}
+
+.email {
+    margin-bottom: 1.25rem;
+}
+
+.login-question-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.submit-buttons{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    width: 12.25rem;
+    height: 3rem;
+    color: #101828;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.help-btn {
+    border: 2px solid #E5E7EB;
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.next-btn {
+    border: none;
+    background: linear-gradient(to right, #fcc500, #F1B200);
+}
+
+.next-btn:hover,
+.next-btn:focus {
+    background: linear-gradient(to right, #EEAE00, #D28900);
+}
