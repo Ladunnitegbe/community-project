@@ -1,12 +1,19 @@
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const bottom = document.querySelector('.next-btn');
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+})
 
 let storedInfo = JSON.parse(localStorage.getItem('userInfo'));
 
-bottom.addEventListener('click', ()=>{
+bottom.addEventListener('click', (e)=>{
+    e.preventDefault;
     if(email.value === storedInfo.Email && password.value === storedInfo.Password){
-        return true
+        console.log('proceeeed');
     } else {
         console.log ('please inter right information');
     }
@@ -56,8 +63,3 @@ function loadScripts(element){
 
 }
 
-
-
-login.addEventListener('click', ()=>{
-    location.reload();
-})

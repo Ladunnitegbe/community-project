@@ -2,6 +2,11 @@ const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const bottom = document.querySelector('.next-btn');
 const name = document.querySelector('.text');
+const signupForm =document.getElementById('signup-form');
+
+signupForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+})
 
 let savedInfo;
 
@@ -44,7 +49,7 @@ const login = document.querySelector('.login-tab');
 
 
 login.addEventListener('click', (e) => {
-
+     e.preventDefault();
 
     const link = "/module/login/login.html";
 
