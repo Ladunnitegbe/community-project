@@ -2,26 +2,15 @@ const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const bottom = document.querySelector('.next-btn');
 
-const emailValidator = /^[a-zA-Z0-9][a-zA-Z0-9-_.]*@[a-zA-Z]+\.[A-Za-z]{2,}$/g;
-const passwordValidator = /[a-zA-Z0-9]{6,}/g; 
+let storedInfo = JSON.parse(localStorage.getItem('userInfo'));
 
-bottom.addEventListener('click', (e)=>{
-    e.preventDefault();
-    
-    let emailTest = emailValidator.test(email.value);
-    let passwordTest = passwordValidator.test(password.value);
-    
-    if (emailTest && passwordTest){
-        console.log('proceed');
-    }else if(emailTest && !passwordTest) {
-        console.log('enter valid email');
-    }else if(!emailTest && passwordTest){
-        console.log('enter valid password');
+bottom.addEventListener('click', ()=>{
+    if(email.value === storedInfo.Email && password.value === storedInfo.Password){
+        return true
     } else {
-        console.log('enter valid password and email');
+        console.log ('please inter right information');
     }
-
-});
+})
 
 const replacable = document.querySelector('.replacable-content');
 const signUp = document.querySelector('.signup-btn');
@@ -32,7 +21,7 @@ const login = document.querySelector('.login-btn');
 signUp.addEventListener('click', (e)=>{
    
     
-    const link = "../signup/signup.html";
+    const link = "/module/signup/signup.html";
     
     fetch(link).then((res)=>{
 

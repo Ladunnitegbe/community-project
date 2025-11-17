@@ -1,8 +1,8 @@
 const moduleImport = document.querySelectorAll('[data-import]');
-const login = document.querySelector('.log-in');
-const signup = document.querySelector('.sign-up');
-const loginTab = document.querySelector('.login-tab');
-const signupTab = document.querySelector('.signup-tab');
+// const login = document.querySelector('.log-in');
+// const signup = document.querySelector('.sign-up');
+// const loginTab = document.querySelector('.login-tab');
+// const signupTab = document.querySelector('.signup-tab');
 
 for (let element of moduleImport){
     const link = element.getAttribute('data-import');
