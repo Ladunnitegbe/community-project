@@ -3,6 +3,7 @@ const signupPassword = document.querySelector('.password');
 const signupBottom = document.querySelector('.next-btn');
 const name = document.querySelector('.text');
 const signupForm =document.getElementById('signup-form');
+const logInTab = document.querySelector('.login-tab')
 
 signupForm.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -46,3 +47,6 @@ signupBottom.addEventListener('click', (e) => {
     
 });
 
+logInTab.addEventListener('click',()=>{
+    window.location.reload();
+})
