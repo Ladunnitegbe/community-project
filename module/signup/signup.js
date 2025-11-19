@@ -30,6 +30,9 @@ signupBottom.addEventListener('click', (e) => {
         }
 
         localStorage.setItem('userInfo', JSON.stringify(savedInfo));
+        signupBottom.addEventListener('click',()=>{
+            window.location.href = "/auth.html";
+        })
 
     } else if (emailTest && !passwordTest) {
         console.log('enter valid email');
@@ -40,6 +43,6 @@ signupBottom.addEventListener('click', (e) => {
 
     }
 
-    window.location.href = "/auth.html";
+    
 });
 
