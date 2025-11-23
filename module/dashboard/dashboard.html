@@ -1,0 +1,31 @@
+<link href="/assests/css/reset.css" rel="stylesheet">
+<link href="/module/dashboard/dashboard.css" rel="stylesheet">
+<script src="/module/dashboard/dashboard.js" defer></script>
+<script src="/assests/js/global.js" defer></script>
+
+<div class="dashoard-container">
+    <h1 class="dashboard-title"></h1>
+    <p class="dashboard-about">Here's what's happening with your productivity today</p>
+
+    <div class="_grid dashboard-content">
+        <div data-import="/components/card/card.html" class="card-one"></div>
+        <div data-import="/components/card/card.html" class="card-two change-content"></div>
+        <div data-import="/components/card/card.html" class="card-three change-content"></div>
+        <div data-import="/components/card/card.html" class="card-four change-content"></div>
+
+        <div class="card-five">
+
+            <div class="flex">
+                <img src="/module/dashboard/images/clock.svg" alt="clock icon">
+                <p class="card-five-title">Recent Tasks</p>
+            </div>
+            <img src="/module/dashboard/images/grey-tick.svg" class="card-five-image">
+            <p class="card-five-p">No tasks yet</p>
+
+        </div>
+
+        <div data-import="/module/actionCard/actionCard.html" class="card-six"></div>
+
+    </div>
+
+</div>

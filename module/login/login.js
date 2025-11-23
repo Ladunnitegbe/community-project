@@ -13,7 +13,7 @@ let storedInfo = JSON.parse(localStorage.getItem('userInfo'));
 loginBottom.addEventListener('click', (e)=>{
     e.preventDefault();
     if(loginEmail.value === storedInfo.Email && loginPassword.value === storedInfo.Password){
-        console.log('proceeeed');
+      window.location.href ="/main.html"
     } else {
         console.log ('please inter right information');
     }

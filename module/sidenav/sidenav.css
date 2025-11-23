@@ -1,0 +1,126 @@
+@import url('/assests/css/reset.css');
+
+.sidenav-container {
+    box-sizing: border-box;
+    max-width: 16rem;
+    max-height: 40rem;
+    background-color: white;
+    border: 1px solid #EEF2FF;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+._flex {
+    display: flex;
+    align-items: center;
+}
+
+.sidenav-brand {
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    position: relative;
+
+}
+
+.sidenav-brand,
+.user-info {
+    padding: .75rem 1rem .9rem 1rem;
+    border-bottom: 1px solid #EEF2FF;
+}
+
+.sidenav-brand_all,
+.user-info {
+    gap: .75rem;
+}
+
+.sidenav-brand_logo {
+    width: 40px;
+    height: 40px;
+    background-color: #4743F7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidenav-brand_title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+.btn {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #06B6D4;
+
+}
+
+.hidebtn {
+    position: absolute;
+    right: 1rem;
+    display: none;
+}
+
+.first-letter {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #374FF9;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: .875rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: .5rem;
+}
+
+.user-email {
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+.sidenav-container-tabs{
+    padding: 1.2rem 1rem 182px 1rem;
+    border-bottom: 1px solid #EEF2FF;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.current-tab{
+    padding: .5rem 0 .5rem .75rem;
+    gap: .75rem;
+    border-radius: 6px;
+}
+
+.tab-content {
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.logout-container{
+    padding: 2rem 1.75rem;
+    gap: .75rem;
+}
+
+#logout {
+    font-size: .875rem;
+    font-weight: 500;
+    color: red;
+    
+}

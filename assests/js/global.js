@@ -1,24 +1,31 @@
-const moduleImport = document.querySelectorAll('[data-import]');
+function renderComponents(elements){
 
-for (let element of moduleImport){
-    const link = element.getAttribute('data-import');
+  for (let element of elements) {
+ 
+    const dataImport = element.getAttribute("data-import");
     
-    fetch(link).then((res)=>{
-
+    fetch(dataImport)
+      .then((res) => {
+          if(!res.ok){
+              throw "Not found"
+          }
         return res.text();
-
-    }).then((component)=>{
-        
-      
+      })
+      .then((component) => {
         element.innerHTML = component;
-        loadScripts(element);
-
-    }).catch(()=>{
-        element.innerHTML= '<h2>There are nothing in the page<h2>';
-    });
+        loadComponentScripts(element)
+        const subComponents = element.querySelectorAll("[data-import]");
+        renderComponents(subComponents)
+      })
+      .catch(() => {
+        element.innerHTML = `<h4>Component not found</h4>`;
+      });
+  }
 }
+const componentElements = document.querySelectorAll("[data-import]");
+renderComponents(componentElements)
 
-function loadScripts(element){
+function loadComponentScripts(element){
     const scripts = element.querySelectorAll("script");
     for (let script of scripts) {
         const newScript = document.createElement('script');
@@ -30,7 +37,6 @@ function loadScripts(element){
         }
         script.remove()
         
-        document.body.appendChild(newScript)
+        element.appendChild(newScript)
     }
-
 }

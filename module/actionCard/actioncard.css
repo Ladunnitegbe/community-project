@@ -1,0 +1,72 @@
+
+.action-card-container {
+    max-width: 31.5rem;
+    border: 1px solid #EEF2FF;
+    padding: 1.5rem;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.action-card-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #1E293B;
+}
+
+.action-flex,
+.action-cards, .cards-holder {
+    display: flex;
+}
+
+.cards-holder {
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.action-card-about {
+    gap: .75rem;
+    margin-bottom: 1.875rem;
+}
+
+.action-cards {
+    gap: .75rem;
+    align-items: center;
+    padding: 1.0625rem 16.5625rem 1.0625rem 1.0625rem;
+    background-color: #F9FAFB;
+    border: 1px solid #EEF2FF;
+    border-radius: 6px;
+}
+
+.action-cards:hover, .action-cards:focus{
+    background-color: #06B6D4;
+}
+
+.action-p {
+    font-size: .875rem;
+    font-weight: 500;
+    color: black;
+}
+
+.action-p-instruction {
+    font-weight: 500;
+    font-size: .75rem;
+    color: #6A7282;
+}
+.action-img-one, .action-img-two, .action-img-three{
+
+    padding: .75rem;
+    border-radius: .5rem;
+}
+
+.action-img-one {
+    background-color: #DBEAFE;
+}
+
+.action-img-two{
+    background-color: #CEFAFE;
+}
+
+.action-img-three {
+    background-color: #DBFCE7;
+}
