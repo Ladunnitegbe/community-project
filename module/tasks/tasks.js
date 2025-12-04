@@ -10,13 +10,6 @@ const allMainSelector = document.querySelector('.main');
 const LoadingAddTemplate = document.getElementById('user-task_template');
 const noContentBox = document.querySelector('.tasks-contents-list');
 
-// let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-// let stats = {
-//     active: 0,
-//     completed: 0
-// };
-
-
 taskTabProgress.addEventListener('click', () => {
     myTaskTab.style.backgroundColor = "#F3F4F6";
     taskTabProgress.style.backgroundColor = "white";
@@ -71,8 +64,6 @@ function btnClick() {
 
             createBtn.addEventListener('click', () => {
 
-                let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-                let stats = JSON.parse(localStorage.getItem('stats')) || { active: 0, completed: 0 };
 
                 if (addTaskTitle.value.length > 0 && addTaskDescription.value.length > 0) {
 
@@ -96,6 +87,8 @@ function btnClick() {
                     templatedifficalty.textContent = inputOption.value;
                     activeNum.textContent = Number(activeNum.textContent) + 1;
 
+
+                    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
                     let taskObject = {
                         title: addTaskTitle.value,
                         description: addTaskDescription.value,
@@ -136,6 +129,7 @@ function btnClick() {
                             changeImg = true;
                         }
 
+                        let stats = { active: 0, completed: 0 };
                         stats.active = Number(activeNum.textContent);
                         stats.completed = Number(completeNum.textContent);
                         localStorage.setItem('stats', JSON.stringify(stats));

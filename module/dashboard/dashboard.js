@@ -1,4 +1,3 @@
-
 const title = document.querySelector('.dashboard-title');
 const changeContent = document.querySelectorAll('.change-content');
 const cardOneAmount = document.querySelector('.amount-num');
@@ -9,6 +8,12 @@ const recentLoaded = document.querySelector('.user-recent-template');
 
 let gettitle = JSON.parse(localStorage.getItem('userInfo'));
 title.innerHTML = `Good evening, ${gettitle.Name}!`;
+
+let statContent = JSON.parse(localStorage.getItem('stats')) || { active: 0, completed: 0 };
+cardOneAmount.textContent = statContent.active;
+cardOneCompleted.textContent = statContent.completed + " Completed";
+
+let createdTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 
 const card = [
@@ -29,13 +34,11 @@ changeContent.forEach((ele, i) => {
     cardImage.alt = card[i].Alt;
     cardAmount.textContent = card[i].amount;
     cardComment.textContent = card[i].comment;
+
+    if (ele === changeContent[changeContent.length - 1]) {
+        cardAmount.textContent = Math.floor((statContent.completed / (statContent.active + statContent.completed)) * 100) + "%"|| 0;
+    }
 });
-
-let stats = JSON.parse(localStorage.getItem('stats')) || { active: 0, completed: 0 };
-cardOneAmount.textContent = stats.active;
-cardOneCompleted.textContent = stats.completed + " Completed";
-
-let createdTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 if (createdTasks.length > 0) {
 
